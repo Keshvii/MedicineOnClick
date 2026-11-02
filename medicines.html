@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Medicine on Click — a thoughtfully designed healthcare shopping prototype."><title>Shop medicines | Medicine on Click</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css">
+</head>
+<body data-page="medicines">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="announcement">
+A little care. A healthier everyday. <span>Discover everyday healthcare essentials <i data-lucide="arrow-up-right"></i></span>
+</div>
+<header class="site-header">
+<div class="container header-main">
+<a class="logo" href="index.html" aria-label="Medicine on Click home">medicine<span class="logo-case">✚</span>nclick<span class="logo-dot">®</span><small>YOUR HEALTH. ONE CLICK AWAY.</small></a>
+<form class="header-search" action="medicines.html">
+<i data-lucide="search"></i><input name="q" aria-label="Search medicines" placeholder="Search medicines, brands & more"><button aria-label="Search" type="submit"><i data-lucide="arrow-right"></i></button>
+</form>
+<div class="header-actions">
+<button class="login-trigger" aria-label="Login or register"><i data-lucide="user-round"></i><span>Login / Register</span></button><button class="cart-trigger" aria-label="Open shopping cart"><i data-lucide="shopping-bag"></i><span>Cart</span><b class="cart-count">0</b></button><button class="menu-toggle" aria-controls="main-navigation" aria-label="Toggle navigation" aria-expanded="false"><i data-lucide="menu"></i></button>
+</div>
+</div>
+<div class="nav-wrap">
+<nav id="main-navigation" class="container main-nav" aria-label="Main navigation">
+<div>
+<a href="index.html" data-page="home">Home</a><a href="medicines.html" data-page="medicines">All medicines</a><a href="medicines.html?category=Wellness">Vitamins & supplements</a><a href="medicines.html?category=Personal%20care">Personal care</a><a href="index.html#offers">Offers <span class="tiny-tag">NEW</span></a>
+</div>
+<a class="business-link" href="business.html" data-page="business"><i data-lucide="briefcase-business"></i> For businesses <i data-lucide="arrow-up-right"></i></a>
+</nav>
+</div>
+</header>
+<main id="main">
+<section class="catalogue-intro">
+<div class="container">
+<div class="breadcrumbs">
+<a href="index.html">Home</a><i data-lucide="chevron-right"></i><span>All medicines</span>
+</div>
+<span class="eyebrow">GOOD HEALTH STARTS WITH GOOD CARE</span><h1>Your everyday <em>care collection.</em></h1><p>Trusted essentials, thoughtful prices. Find what feels right for you.</p>
+<div class="catalogue-pills">
+<span><i data-lucide="shield-check"></i> Quality-assured selection</span><span><i data-lucide="package"></i> Carefully packed</span><span><i data-lucide="heart"></i> Made for everyday care</span>
+</div>
+</div>
+<i class="intro-art" data-lucide="pill"></i>
+</section>
+<section class="container catalogue-layout section">
+<aside class="filters" id="filter-panel">
+<div class="filter-title">
+<h3>Filters</h3><button id="reset-filters">Reset all</button>
+</div>
+<fieldset>
+<legend>Category</legend>
+<div id="category-filters">
+</div>
+</fieldset>
+<fieldset>
+<legend>Brand</legend>
+<div id="brand-filters">
+</div>
+</fieldset>
+<fieldset>
+<legend>Price range</legend><input type="range" min="0" max="3000" value="3000" step="50" id="price-range" aria-label="Maximum price">
+<div class="range-labels">
+<span>₹0</span><output id="price-label">₹3,000</output>
+</div>
+</fieldset>
+<fieldset>
+<legend>Availability</legend><label class="check-row"><input type="checkbox" id="in-stock"> In stock only</label>
+</fieldset>
+<div class="pharmacist-note">
+<i data-lucide="badge-help"></i><h4>A little guidance matters.</h4><p>Have questions about your medicines? Your pharmacist is the best person to help.</p><button class="text-link" data-info="prescription">About prescriptions <i data-lucide="arrow-right"></i></button>
+</div>
+</aside>
+<div class="catalogue-main">
+<div class="catalogue-toolbar">
+<div>
+<h2>All medicines & healthcare</h2><p id="results-count" aria-live="polite"></p>
+</div>
+<button id="filter-toggle" class="outline-button"><i data-lucide="sliders-horizontal"></i> Filters</button><label class="sort-label">Sort by <select id="sort"><option value="recommended">Recommended</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option><option value="name">Name: A–Z</option></select></label>
+</div>
+<form id="catalogue-search" class="catalogue-search">
+<i data-lucide="search"></i><input id="product-query" placeholder="Search by medicine, brand or ingredient…" aria-label="Search catalogue"><button class="icon-btn" aria-label="Search catalogue"><i data-lucide="arrow-right"></i></button>
+</form>
+<div id="active-filters">
+</div>
+<div class="product-grid catalogue-products" id="catalogue-products">
+</div>
+<div class="catalogue-disclaimer">
+<i data-lucide="info"></i><p>Product packaging is illustrated for this prototype. Prices and stock are sample data. Prescription items need a valid prescription. Alternative suggestions are mock mappings and require pharmacist verification before substitution.</p>
+</div>
+</div>
+</section>
+</main>
+<section class="service-strip container">
+<div>
+<i data-lucide="shield-check"></i><span><strong>Quality comes first</strong><small>Authentic healthcare essentials</small></span>
+</div>
+<div>
+<i data-lucide="package-check"></i><span><strong>Packed with care</strong><small>From shelf to your doorstep</small></span>
+</div>
+<div>
+<i data-lucide="heart-handshake"></i><span><strong>Here for your health</strong><small>Thoughtful care at every step</small></span>
+</div>
+<div>
+<i data-lucide="lock-keyhole"></i><span><strong>Privacy, protected</strong><small>A safer shopping experience</small></span>
+</div>
+</section>
+<footer class="footer">
+<div class="container footer-grid">
+<div>
+<a class="logo" href="index.html">medicine<span class="logo-case">✚</span>nclick<small>YOUR HEALTH. ONE CLICK AWAY.</small></a><p>Everyday essentials. Thoughtful care.<br>A healthier life, just a click away.</p>
+<div class="socials">
+<span>Instagram</span><span>Facebook</span><span>LinkedIn</span>
+</div>
+</div>
+<div>
+<h4>Discover</h4><a href="medicines.html">All medicines</a><a href="medicines.html?category=Wellness">Wellness essentials</a><a href="index.html#offers">Special offers</a><a href="business.html">Business accounts</a>
+</div>
+<div>
+<h4>How can we help?</h4><button data-info="delivery">Delivery information</button><button data-info="returns">Returns & refunds</button><button data-info="prescription">Prescription policy</button><button data-info="contact">Contact us</button>
+</div>
+<div class="footer-note">
+<h4>A note on your health</h4><p>Prescription medicines require a valid prescription and pharmacist review. Always follow your healthcare professional’s advice.</p><span class="demo-label">CLIENT PRESENTATION · UI PROTOTYPE</span>
+</div>
+</div>
+<div class="container footer-bottom">
+<span>© 2026 Medicine on Click. All rights reserved.</span><span>Illustrative products & pricing. No orders or payments are processed.</span><button data-info="privacy">Privacy & terms</button>
+</div>
+</footer>
+<div class="toast" role="status" aria-live="polite">
+</div>
+<dialog id="cart-dialog" class="cart-dialog" aria-label="Your shopping cart">
+<div class="dialog-heading">
+<div>
+<span class="eyebrow">A LITTLE CARE, IN YOUR BAG</span><h2>Your cart <span class="cart-count">0</span></h2>
+</div>
+<button class="icon-btn close-dialog" aria-label="Close cart"><i data-lucide="x"></i></button>
+</div>
+<div id="cart-items">
+</div>
+<div id="cart-summary">
+</div>
+</dialog>
+<dialog id="info-dialog">
+<button class="icon-btn close-dialog" aria-label="Close dialog"><i data-lucide="x"></i></button>
+<div id="info-content">
+</div>
+</dialog>
+<script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script><script src="script.js"></script>
+</body>
+</html>
